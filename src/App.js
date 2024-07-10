@@ -20,10 +20,27 @@ function Logo() {
 }
 
 function Form() {
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(event);
+  }
+
   return (
-    <div className="add-form">
+    <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your 😍 trip?</h3>
-    </div>
+      <select>
+        {Array.from({ length: 20 }, (_, i) => i + 1).map((option) => (
+          <option value={option} key={option}>
+            {option}
+          </option>
+        ))}
+        {/* <option value={1}>1</option>
+        <option value={2}>2</option>
+        <option value={3}>3</option> */}
+      </select>
+      <input type="text" placeholder="Item..." />
+      <button>Add</button>
+    </form>
   );
 }
 function PackingList() {
