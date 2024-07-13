@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -16,11 +17,13 @@ body {
   color: #5a3e2b;
   font-family: "Quicksand";
   font-weight: 500;
+  height: 100%;
+  margin: 0;
 }
 
 .app {
   width: 100%;
-  height: 100vh;
+  min-height: 100%;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
 }
